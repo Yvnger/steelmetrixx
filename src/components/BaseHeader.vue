@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import BaseNavigation from '@/components/BaseNavigation.vue'
+import BaseNavigation from '@/components/HeaderNav.vue'
 
 export default {
   components: { BaseNavigation },
