@@ -1,25 +1,36 @@
-// Vars
-$container-width: 990px;
-$container-padding: 15px;
-$container-calculated-width: $container-width + ($container-padding * 2);
+// Color
+$orange: #eb6329;
+$orange-hover: #d24d14;
+$text: #464646;
+
+$bg-grey: #d8d8d8;
+
 
 // Font vars
 $primary-font: 'Open Sans', sans-serif;
 
 // Breakpoints
-$mobile: 767px;
-$tablet: 768px;
-$laptop: 1024px;
-$desktop: 1280px;
+$mobile: 430px;
+$tablet-v: 834px;
+$tablet-h: 1024px;
+$laptop: 1368px;
+$desktop: 1920px;
 
 :root {
-  --container-width: #{$container-calculated-width};
-  --container-padding: #{$container-padding};
+  --container-width: calc(1316px + (15px * 2));
+  --container-padding: 15px;
   --transition-duration: 0.15s;
   --transition-function: ease-in-out;
 
-  @media (max-width: $mobile) {
-    --container-width: 100%;
-    --container-padding: 15px;
+  @include break($laptop) {
+    --container-width: 1134px;
+  }
+
+  @include break($tablet-h) {
+    --container-width: 720px;
+  }
+
+  @include break($mobile) {
+    --container-width: 340px;
   }
 }
