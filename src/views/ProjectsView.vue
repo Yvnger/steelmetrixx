@@ -1,9 +1,9 @@
 <template>
-  <div class="home">
-    <h1>Home page</h1>
-  </div>
+  <h1>Проекты</h1>
 </template>
 
 <script>
 export default {}
 </script>
+
+<style scoped></style>
