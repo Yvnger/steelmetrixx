@@ -2,7 +2,9 @@
   <nav class="header__nav nav-header">
     <ul class="nav-header__items">
       <li class="nav-header__item">
-        <router-link class="nav-header__link" to="/"> Главная </router-link>
+        <router-link class="nav-header__link" :to="{ name: 'home' }">
+          Главная
+        </router-link>
       </li>
       <li class="nav-header__item nav-header__item--dropdown">
         <a class="nav-header__link" href="#" @click.prevent>
@@ -10,12 +12,15 @@
           <div class="nav-header__dropdown dropdown">
             <ul class="dropdown__items">
               <li class="dropdown__item">
-                <router-link to="/technologies" class="dropdown__link">
+                <router-link
+                  :to="{ name: 'technologies' }"
+                  class="dropdown__link"
+                >
                   Производственные технологии
                 </router-link>
               </li>
               <li class="dropdown__item">
-                <router-link to="/projects" class="dropdown__link">
+                <router-link :to="{ name: 'projects' }" class="dropdown__link">
                   Реализованные проекты
                 </router-link>
               </li>
@@ -24,14 +29,14 @@
         </a>
       </li>
       <li class="nav-header__item">
-        <router-link class="nav-header__link" to="/about">
+        <router-link class="nav-header__link" :to="{ name: 'about' }">
           О компании
         </router-link>
       </li>
       <li class="nav-header__item">
-        <router-link class="nav-header__link" to="/contacts">
-          Контакты</router-link
-        >
+        <router-link class="nav-header__link" :to="{ name: 'contacts' }">
+          Контакты
+        </router-link>
       </li>
     </ul>
 
