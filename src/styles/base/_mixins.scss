@@ -7,11 +7,16 @@
   @font-face {
     font-family: '#{$font-family}';
     src: url('#{$font-path}.woff2') format('woff2'),
-      url('#{$font-path}.woff') format('woff'),
-      url('#{$font-path}.ttf') format('truetype');
+      url('#{$font-path}.woff') format('woff');
     font-weight: $font-weight;
     font-style: $font-style;
     font-display: swap;
+  }
+}
+
+@mixin break($value) {
+  @media (max-width: $value) {
+    @content;
   }
 }
 
