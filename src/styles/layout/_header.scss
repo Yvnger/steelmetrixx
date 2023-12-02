@@ -1,0 +1,82 @@
+.header {
+  padding: 14px 0;
+  border-bottom: 1px solid $bg-grey;
+  background-color: #fff;
+
+  @include break($laptop) {
+    padding: 18px 0;
+  }
+
+  @include break($tablet-h) {
+    padding: 8px 0;
+  }
+
+  @include break($tablet-v) {
+    padding: 10px 0;
+  }
+
+  @include break($mobile) {
+    padding: 12px 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: block;
+    width: 260px;
+    height: 52px;
+
+    &-link {
+      display: inline-block;
+      margin-right: auto;
+    }
+
+    @include break($laptop) {
+      width: 220px;
+      height: 44px;
+    }
+
+    @include break($tablet-v) {
+      width: 202px;
+      height: 40px;
+    }
+
+    @include break($mobile) {
+      width: 179px;
+      height: 36px;
+    }
+  }
+
+  &__nav {
+    margin-right: 70px;
+
+    @include break($tablet-h) {
+      order: 3;
+      margin-right: 0;
+    }
+  }
+
+  &__phone {
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    color: $orange;
+
+    @include break($laptop) {
+      font-size: 16px;
+    }
+
+    @include break($tablet-h) {
+      order: 2;
+      margin-right: 50px;
+    }
+
+    @include break($mobile) {
+      display: none;
+    }
+  }
+}
