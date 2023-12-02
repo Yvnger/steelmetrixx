@@ -1,6 +1,9 @@
-// @include font-face("Open Sans", "fonts/OpenSans", 400, normal);
+@include font-face("Gilroy", "@/assets/fonts/Gilroy-Regular", 400, normal);
+@include font-face("Gilroy", "@/assets/fonts/Gilroy-Medium", 500, normal);
+@include font-face("Gilroy", "@/assets/fonts/Gilroy-Semibold", 600, normal);
+@include font-face("Gilroy", "@/assets/fonts/Gilroy-Bold", 700, normal);
 
 html {
-  font-family: #{$primary-font};
+  font-family: 'Gilroy', sans-serif;
   font-size: 16px;
 }
