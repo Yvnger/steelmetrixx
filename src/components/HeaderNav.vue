@@ -1,43 +1,11 @@
 <template>
   <nav class="header__nav nav-header">
     <ul class="nav-header__items">
-      <li class="nav-header__item">
-        <router-link class="nav-header__link" :to="{ name: 'home' }">
-          Главная
-        </router-link>
-      </li>
-      <li class="nav-header__item nav-header__item--dropdown">
-        <a class="nav-header__link" href="#" @click.prevent>
-          Компетенции
-          <div class="nav-header__dropdown dropdown">
-            <ul class="dropdown__items">
-              <li class="dropdown__item">
-                <router-link
-                  :to="{ name: 'technologies' }"
-                  class="dropdown__link"
-                >
-                  Производственные технологии
-                </router-link>
-              </li>
-              <li class="dropdown__item">
-                <router-link :to="{ name: 'projects' }" class="dropdown__link">
-                  Реализованные проекты
-                </router-link>
-              </li>
-            </ul>
-          </div>
-        </a>
-      </li>
-      <li class="nav-header__item">
-        <router-link class="nav-header__link" :to="{ name: 'about' }">
-          О компании
-        </router-link>
-      </li>
-      <li class="nav-header__item">
-        <router-link class="nav-header__link" :to="{ name: 'contacts' }">
-          Контакты
-        </router-link>
-      </li>
+      <HeaderNavItem
+        :route="item"
+        v-for="item in navItems"
+        :key="item.anchor"
+      />
     </ul>
 
     <button class="nav-header__hamburger">
@@ -47,3 +15,17 @@
     </button>
   </nav>
 </template>
+
+<script>
+import HeaderNavItem from '@/components/HeaderNavItem.vue'
+import { mapGetters } from 'vuex'
+
+export default {
+  components: { HeaderNavItem },
+  computed: {
+    ...mapGetters({
+      navItems: 'getNavItems',
+    }),
+  },
+}
+</script>
