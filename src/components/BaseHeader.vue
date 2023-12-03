@@ -9,7 +9,7 @@
         />
       </router-link>
 
-      <BaseNavigation />
+      <HeaderNav />
 
       <a href="tel:88003027479" class="header__phone">8 800 302 74 79</a>
     </div>
@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import BaseNavigation from '@/components/HeaderNav.vue'
+import HeaderNav from '@/components/HeaderNav.vue'
 
 export default {
-  components: { BaseNavigation },
+  components: { HeaderNav },
 }
 </script>
