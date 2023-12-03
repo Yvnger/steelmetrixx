@@ -1,8 +1,8 @@
 <template>
   <RouterLink
-      class="nav-header__link"
-      :to="{ name: route.path }"
-      v-if="!route.dropdown"
+    class="nav-header__link"
+    :to="{ name: route.path }"
+    v-if="!route.dropdown"
   >
     {{ route.anchor }}
   </RouterLink>
@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  props: ['route']
+  props: ['route'],
 }
 </script>
